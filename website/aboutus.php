@@ -103,7 +103,7 @@ body {
    </div>
 	<div id="main-wrapper">
 	<center><h2>About Us</h2>
-		<p> The website provides real time vegetable shops in four different markets </p>
+		<p> The website provides real time sales in four different markets </p>
 		<p> and the temperature, humidity values of the farmer's land.</p>
 		<h2><p> Created By</p></h2>
 		<p> Shruthip . V </p>
