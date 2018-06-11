@@ -11,19 +11,18 @@ with con:
     count=cur.execute("SELECT * FROM sensordata")
     while 1:
         try:
-            os.system("scp pi@192.168.43.228:~/Hackathon/data* data.txt")
+            os.system("scp pi@192.168.43.228:~/Hackathon/data* data.txt") 
             f=open("data.txt","r")
             raw_data=(f.read())
             f.close()
             print(raw_data)
             tracker,humidity,temperature=raw_data.split("***")
             tracker="'"+tracker+"'"	
-            print(tracker)
+            #print(tracker)
             humidity=float(humidity)
             temperature=float(temperature)
-            print(humidity)
-            print(temperature)
-
+            #print(humidity)
+            #print(temperature)
             try:
             	if(count > 10):
                     cur.execute("DELETE FROM sensordata")
@@ -35,7 +34,6 @@ with con:
             except:
                 con.rollback()
             time.sleep(5)
-            prev_file=file
         except KeyboardInterrupt:
             print("\nStopped Collecting data...")
             exit()
